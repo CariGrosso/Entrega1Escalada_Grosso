@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+  {% load static %}
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autos EscaladaGrosso</title>
+<link href={% static "css/estilos.css" %} rel="stylesheet" type="text/css">
+<link href={% static "css/header.css" %} rel="stylesheet" type="text/css">
+<link href={% static "css/BasePresenta1.css" %} rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="Cabecera">
+            <a href="index.html" ><img src={% static "images/logo.png" %} class="logo" alt="mirador monte"></a>
+        
+            <nav id="contenedorPrincipal">
+              <a href="#contenedorPrincipal">&#8801;</a>
+              <a href="#">x</a>
+              <ul class="mostrarOcultar">
+                
+                <li><a href="index.html">La Empresa</a></li>
+                <li><a href="#">Nuestros Autos</a></li>                
+                <li><a href="#">Cargar Autos</a></li>
+                <li><a href="#">Contacto</a></li>
+                
+            </nav>
+          </header>
+          {% block presentacion %}
+          {% endblock presentacion %}
+          <footer>
+            <article class="footer_column">
+              <h3>Promociones</h3>
+              <img src="images/2950953.jpg" alt="" width="400" height="200" class="cards"/>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+            </article>
+            <article class="footer_column">
+              <h3>Ubicación</h3>
+              <img src="images/mapa.png" alt="" width="400" height="200" class="cards"/>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+            </article>
+          </footer>
+          <!-- Footer Section -->
+          
+          <!-- Copyrights Section -->
+          <div class="copyright">-&copy;2021- <strong>Mirador Monte</strong>
+        
+            <div class="redes">
+              <img src="images/face.svg" alt="Facebook" class="rotate">
+              <img src="images/insta.svg" alt="Instagram" class="rotate">
+              <img src="images/what.svg" alt="Whatsap"class="rotate">
+            </div>
+          </div>
+        
+         
+    </div>
+</body>
+</html>

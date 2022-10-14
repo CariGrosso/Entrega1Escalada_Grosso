@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+#presentacion {
+  
+	margin-left: 0%;
+	position: relative;
+	top:-35px
+	
+}
+
+.contenedor {
+	position: relative;
+	background-color:rgb(243, 240, 240);
+   width: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+	
+	
+	
+}
+.diapositiva {
+	position: relative;
+	display: flex;
+	width: 400vw;
+	animation: principal;
+	animation-duration: 20s;
+	animation-iteration-count: 2;
+	animation-timing-function: linear; 
+	
+}
+
+.diapositiva .ima {
+	width: 100vw;
+	
+	
+	
+}
+
+.diapositiva .texto {
+	position: absolute;
+	width: 40vw;
+	top: 30%;
+	left: 25vw;
+	color: #FFFFFF;
+	background-color: rgba(82, 80, 80, 0.5); 
+	border-radius: 41px;
+	padding-left: 1rem;
+	padding-right: 1rem; 
+}
+.diapositiva .texto h2{
+	font-size: 3rem;
+	font-weight: bolder;
+	text-shadow: 0px 4px 4px rgba(107, 105, 105, 0.25);
+	text-align: center;
+}
+.diapositiva .texto h2 span{
+	font-weight: bolder;
+}
+.diapositiva .texto p{
+font-size: 2rem;
+text-align: center;
+font-weight: bolder;
+}
+
+.diapositiva .ima img {
+	width: 100%;
+	
+}
+
+ @keyframes principal {
+  0% {margin-left: 0vw;}
+  23% {margin-left: 0vw;}
+  25% {margin-left: -100vw;}
+  48% {margin-left: -100vw;}
+  50% {margin-left: -200vw;}
+  73% {margin-left: -200vw;}
+  75% {margin-left: -300vw;}
+  99% {margin-left: -300vw;}
+  100% {margin-left: -400vw;}
+} 
+
+
+  
+/* dots styles */
+.comandoPunto  {
+	margin-top: 0px;
+	background-color: rgba(63, 61, 61, 0.5); 
+	position: relative;
+	padding-top: 10px;
+	text-align:center;
+}
+.comandoPunto li {
+	display:inline;
+	padding:0; margin:0;
+	list-style:none;
+}
+.comandoPunto a {
+	position: relative;
+	display:inline-block;
+	height:10px; width: 10px;
+	margin: 0 5px;
+	text-indent: -9999px;
+	background: #fff;
+	border-bottom:0;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
+}
+.comandoPunto a:hover {
+	background-color: rgb(251, 198, 24);
+}
+
+
+@media screen and (max-width: 1200px) {
+   .diapositiva .texto {
+		top: 20%;
+   }
+   .diapositiva .texto h2{
+	   font-size: 4vw;
+	   }
+   .diapositiva .texto p{
+	   font-size: 2.5vw;
+   }
+}
