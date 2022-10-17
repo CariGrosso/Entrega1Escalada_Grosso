@@ -1,0 +1,73 @@
+{% extends 'padres/base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+<title>Alta de Vehículos</title>
+{% endblock titulo_pagina %}
+
+{% block contenedor %}
+{% block cabezera %}
+        <header class="Cabecera">
+            <a href="index.html" ><img src={% static "images/logo.png" %} class="logo" alt="mirador monte"></a>
+        
+            <nav id="contenedorPrincipal">
+              <a href="#contenedorPrincipal">&#8801;</a>
+              <a href="#">x</a>
+              <ul class="mostrarOcultar">                
+                <li><a href={% url "index" %}>La Empresa</a></li>
+                <li><a href={% url "cargar" %}>Cargar Autos</a></li>                
+                <li><a href={% url "ver" %}>Nuestros Autos</a></li>
+                <li><a href="#ct">Contacto</a></li>
+               
+            </nav>
+          </header>
+         {% endblock cabezera %}
+ 
+<h2>Alta de Vehículos</h2>
+<form action={% url 'cargar' %} method="POST" class="formu">
+    {% csrf_token %}
+    <p>
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" placeholder="Marca">
+    </p>
+
+    <p>
+        <label for="modelo">Modelo:</label>
+        <input type="text" name="modelo" placeholder="Modelo">
+    </p>
+    <p>
+        <label for="anio">Año:</label>
+        <input type="number" name="anio" placeholder="Año">
+    </p>
+    <p>
+        <label for="km">Kilómetros:</label>
+        <input type="number" name="km" placeholder="Kilometros">
+    </p>
+    <p>
+        <label for="color">Color:</label>
+        <input type="text" name="color" placeholder="Color">
+    </p>
+    <p>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" placeholder="Precio">
+    </p>
+    
+    <table>
+        {{formulario}}
+    </table>
+    <button>Crear</button>
+</form>
+ 
+{% block pie %}
+<footer style="width:100%";>
+<div class="copyright">-&copy;- 2022  <strong>ESCALADA - GROSSO</strong>
+
+  <div class="redes">
+    <img src={% static "images/face.svg" %} alt="Facebook" class="rotate">
+    <img src={% static "images/insta.svg" %} alt="Instagram" class="rotate">
+    <img src={% static "images/what.svg" %} alt="Whatsap"class="rotate">
+  </div>
+</div>    
+{% endblock pie %}   
+
+{% endblock contenedor %}

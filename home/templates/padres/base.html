@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+  {% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block titulo_pagina %}
+<title>Autos EscaladaGrosso</title>
+{% endblock titulo_pagina %}
+<link href={% static "css/estilos.css" %} rel="stylesheet" type="text/css">
+<link href={% static "css/header.css" %} rel="stylesheet" type="text/css">
+<link href={% static "css/BasePresenta1.css" %} rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  {% block contenedor %}
+    <div class="container">
+      {% block cabezera %}
+        <header class="Cabecera">
+            <a href="index.html" ><img src={% static "images/logo.png" %} class="logo" alt="mirador monte"></a>
+        
+            <nav id="contenedorPrincipal">
+              <a href="#contenedorPrincipal">&#8801;</a>
+              <a href="#">x</a>
+              <ul class="mostrarOcultar">                
+                <li><a href={% url "index" %}>La Empresa</a></li>
+                <li><a href={% url "cargar" %}>Cargar Autos</a></li>                
+                <li><a href={% url "ver" %}>Nuestros Autos</a></li>
+                <li><a href="#ct">Contacto</a></li>
+                
+            </nav>
+          </header>
+         {% endblock cabezera %}
+          {% block presentacion %}
+          <section id="presentacion">
+            <div class="contenedor">
+              <div class="diapositiva">
+              <div id="diapo_1">
+                <div class="ima">
+                <img src={% static "images/auto1.jpg" %} alt=""/>
+                  </div>
+                      <div class="texto">
+                        <h2>AUTOS <span>ESCALADA - GROSSO<span></h2>
+                        <p>La Distinción de un estilo único </p>
+                      </div>
+                  </div>                
+                
+          
+              <div id="diapo_2">
+               <div class="ima">
+                  <img src={% static "images/auto2.jpg" %} alt=""/>
+                </div>
+              </div>
+          
+              <div id="diapo_3">
+                <div class="ima">
+                  <img src={% static "images/auto3.jpg" %} alt=""/>
+                </div>
+              </div>   
+             
+              <div id="diapo_3">
+                <div class="ima">
+                  <img src={% static "images/auto1.jpg" %} alt=""/>
+                </div>
+              </div> 
+              </div>
+            </div>
+         
+            <ul class="comandoPunto">
+            <li><a title="Diapositiva 1" href="#diapo_1">Diapositiva 1</a></li>
+            <li><a title="Diapositiva 2" href="#diapo_2">Diapositiva 2</a></li>
+            <li><a title="Diapositiva 3" href="#diapo_3">Diapositiva 3</a></li>
+           
+              
+            </ul>             
+          </section>          
+          {% endblock presentacion %}
+
+          {% block pie %}
+          <footer>
+            <article class="footer_column">
+              <h3>Christian Escalada</h3>
+                <p>Soy empleado de Comercio, tengo ganas de aprender algo diferente para encontrar nuevos horizontes. Me gusta la tecnología y los autos </p>
+            </article>
+            <article class="footer_column">
+              <h3>Carina Grosso</h3>              
+              <p>Eterna estudiante, emprenderoda, siempre con ganas de aprender. Me gusta la naturaleza y la música, pero no me despego de las pantallas de computadoras.En este momento profesora y desarrolladora web. </p>
+            </article>
+      
+          <div class="copyright">-&copy;- 2022  <strong>ESCALADA - GROSSO</strong>
+        
+      
+          {% endblock pie %}
+          <div class="redes" id="ct">
+            <img src={% static "images/face.svg" %} alt="Facebook" class="rotate">
+            <img src={% static "images/insta.svg" %} alt="Instagram" class="rotate">
+            <img src={% static "images/what.svg" %} alt="Whatsap"class="rotate">
+          </div>
+        </div>    
+         
+    </div>
+    {% endblock contenedor%}
+</body>
+</html>

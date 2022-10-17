@@ -1,0 +1,66 @@
+{% extends 'padres/base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+<title>Alta de Vehículos</title>
+{% endblock titulo_pagina %}
+
+{% block contenedor %}
+{% block cabezera %}
+        <header class="Cabecera">
+            <a href="index.html" ><img src={% static "images/logo.png" %} class="logo" alt="mirador monte"></a>
+        
+            <nav id="contenedorPrincipal">
+              <a href="#contenedorPrincipal">&#8801;</a>
+              <a href="#">x</a>
+              <ul class="mostrarOcultar">                
+                <li><a href={% url "index" %}>La Empresa</a></li>
+                <li><a href={% url "cargar" %}>Cargar Autos</a></li>                
+                <li><a href={% url "ver" %}>Nuestros Autos</a></li>
+                <li><a href="#ct">Contacto</a></li>
+              
+                
+            </nav>
+          </header>
+         {% endblock cabezera %}
+ 
+<h2>Listado de Vehículos</h2>
+
+{% comment %} {% for auto in vehiculos %}
+    <li>{{auto.marca}} {{auto.modelo}} {{auto.anio}}</li>
+{% endfor %} {% endcomment %}
+
+<form action={% url 'ver' %} method="GET" class="formuB">
+    <p>
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" placeholder="Ingrese la Marca a buscar">
+    </p>
+    {{formulario}}
+    <button>Buscar</button>
+</form>
+
+    {% if vehiculos %}
+    <div class="formu">
+        {% for auto in vehiculos %}
+            <li>{{auto.marca}} - {{auto.modelo}} -  {{auto.anio}} - {{auto.color}}- Km: {{auto.km}} $  {{auto.precio}}</li>
+        {% endfor %}
+
+    {% else %}
+        <h2>No se encontraron resultados.</h2>
+    {% endif %}
+
+    </div>
+ 
+{% block pie %}
+<footer style="width:100%";>
+<div class="copyright">-&copy;- 2022  <strong>ESCALADA - GROSSO</strong>
+
+  <div class="redes">
+    <img src={% static "images/face.svg" %} alt="Facebook" class="rotate">
+    <img src={% static "images/insta.svg" %} alt="Instagram" class="rotate">
+    <img src={% static "images/what.svg" %} alt="Whatsap"class="rotate">
+  </div>
+</div>    
+{% endblock pie %}   
+
+{% endblock contenedor %}
