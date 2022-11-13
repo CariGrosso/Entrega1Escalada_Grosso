@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block titulo_pagina %}
-<title>Alta de Vehículos</title>
+<title>Página no encontrada</title>
 {% endblock titulo_pagina %}
 
 {% block contenedor %}
@@ -23,16 +23,9 @@
           </header>
          {% endblock cabezera %}
  
-<h2>Alta de Vehículos</h2>
-<form action={% url 'cargar' %} method="POST" class="formu">
-    {% csrf_token %}
-    
-    <table>
-        {{formulario}}
-    </table>
-    <button>Crear</button>
-</form>
- 
+<h2>Página no encontrada</h2>
+<p>La página que estás buscando no está disponible en este momento</p>
+
 {% block pie %}
 <footer style="width:100%";>
 <div class="copyright">-&copy;- 2022  <strong>ESCALADA - GROSSO</strong>
